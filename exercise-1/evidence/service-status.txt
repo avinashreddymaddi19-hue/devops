@@ -1,0 +1,2 @@
+﻿NAME        TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+hello-k8s   NodePort   10.104.75.19   <none>        80:30090/TCP   8m16s
