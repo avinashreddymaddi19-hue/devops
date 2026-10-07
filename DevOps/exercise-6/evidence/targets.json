@@ -1,0 +1,66 @@
+﻿{
+    "status":  "success",
+    "data":  {
+                 "activeTargets":  [
+                                       {
+                                           "discoveredLabels":  {
+                                                                    "__address__":  "metrics:8000",
+                                                                    "__always_scrape_classic_histograms__":  "false",
+                                                                    "__convert_classic_histograms_to_nhcb__":  "false",
+                                                                    "__metrics_path__":  "/metrics",
+                                                                    "__scheme__":  "http",
+                                                                    "__scrape_interval__":  "5s",
+                                                                    "__scrape_native_histograms__":  "false",
+                                                                    "__scrape_timeout__":  "5s",
+                                                                    "job":  "delivery_service"
+                                                                },
+                                           "labels":  {
+                                                          "instance":  "metrics:8000",
+                                                          "job":  "delivery_service"
+                                                      },
+                                           "scrapePool":  "delivery_service",
+                                           "scrapeUrl":  "http://metrics:8000/metrics",
+                                           "globalUrl":  "http://metrics:8000/metrics",
+                                           "lastError":  "",
+                                           "lastScrape":  "2026-10-18T13:39:33.704680825Z",
+                                           "lastScrapeDuration":  0.002487672,
+                                           "health":  "up",
+                                           "scrapeInterval":  "5s",
+                                           "scrapeTimeout":  "5s"
+                                       },
+                                       {
+                                           "discoveredLabels":  {
+                                                                    "__address__":  "prometheus:9090",
+                                                                    "__always_scrape_classic_histograms__":  "false",
+                                                                    "__convert_classic_histograms_to_nhcb__":  "false",
+                                                                    "__metrics_path__":  "/metrics",
+                                                                    "__scheme__":  "http",
+                                                                    "__scrape_interval__":  "5s",
+                                                                    "__scrape_native_histograms__":  "false",
+                                                                    "__scrape_timeout__":  "5s",
+                                                                    "job":  "prometheus"
+                                                                },
+                                           "labels":  {
+                                                          "instance":  "prometheus:9090",
+                                                          "job":  "prometheus"
+                                                      },
+                                           "scrapePool":  "prometheus",
+                                           "scrapeUrl":  "http://prometheus:9090/metrics",
+                                           "globalUrl":  "http://prometheus:9090/metrics",
+                                           "lastError":  "",
+                                           "lastScrape":  "2026-10-18T13:39:34.919797079Z",
+                                           "lastScrapeDuration":  0.004744801,
+                                           "health":  "up",
+                                           "scrapeInterval":  "5s",
+                                           "scrapeTimeout":  "5s"
+                                       }
+                                   ],
+                 "droppedTargets":  [
+
+                                    ],
+                 "droppedTargetCounts":  {
+                                             "delivery_service":  0,
+                                             "prometheus":  0
+                                         }
+             }
+}

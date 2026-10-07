@@ -1,0 +1,37 @@
+﻿{
+    "status":  "success",
+    "data":  {
+                 "alerts":  [
+                                {
+                                    "labels":  {
+                                                   "alertname":  "HighPendingDeliveries",
+                                                   "instance":  "metrics:8000",
+                                                   "job":  "delivery_service",
+                                                   "severity":  "warning"
+                                               },
+                                    "annotations":  {
+                                                        "description":  "Pending deliveries have exceeded 10 for at least 15 seconds.",
+                                                        "summary":  "High pending deliveries"
+                                                    },
+                                    "state":  "firing",
+                                    "activeAt":  "2026-10-18T13:40:18.919052257Z",
+                                    "value":  "6.4e+01"
+                                },
+                                {
+                                    "labels":  {
+                                                   "alertname":  "HighAverageDeliveryTime",
+                                                   "instance":  "metrics:8000",
+                                                   "job":  "delivery_service",
+                                                   "severity":  "critical"
+                                               },
+                                    "annotations":  {
+                                                        "description":  "The average observed delivery duration over the last minute has exceeded 30 seconds for at least 15 seconds.",
+                                                        "summary":  "High average delivery time"
+                                                    },
+                                    "state":  "firing",
+                                    "activeAt":  "2026-10-18T13:40:43.919052257Z",
+                                    "value":  "3.9794778186581986e+01"
+                                }
+                            ]
+             }
+}
