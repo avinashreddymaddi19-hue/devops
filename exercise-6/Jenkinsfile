@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+    options {
+        disableConcurrentBuilds()
+        timeout(time: 20, unit: 'MINUTES')
+    }
+    stages {
+        stage('Pre-check Docker') {
+            steps {
+                sh 'docker version && docker compose version'
+            }
+        }
+        stage('Validate Configuration') {
+            steps {
+                sh 'cd /lab && docker compose -p exercise6 config --quiet'
+            }
+        }
+        stage('Build Monitoring Images') {
+            steps {
+                sh 'cd /lab && docker compose -p exercise6 build metrics prometheus grafana'
+            }
+        }
+        stage('Validate Prometheus Rules') {
+            steps {
+                sh 'docker run --rm --entrypoint promtool exercise6-prometheus:lab check config /etc/prometheus/prometheus.yml'
+            }
+        }
+        stage('Run Monitoring Stack') {
+            steps {
+                sh 'cd /lab && docker compose -p exercise6 up -d --no-build metrics prometheus grafana'
+            }
+        }
+        stage('Verify Metrics Scraping') {
+            steps {
+                retry(15) {
+                    sleep time: 5, unit: 'SECONDS'
+                    sh '''docker run --rm --network exercise6_default --entrypoint python exercise6-metrics:lab -c 'import json,urllib.request; d=json.load(urllib.request.urlopen("http://prometheus:9090/api/v1/query?query=up")); assert any(r["metric"].get("job") == "delivery_service" and r["value"][1] == "1" for r in d["data"]["result"]), d; print("Delivery metrics target is UP")' '''
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+﻿NAME                     IMAGE                      COMMAND                  SERVICE      CREATED          STATUS          PORTS
+exercise6-grafana-1      exercise6-grafana:lab      "/run.sh"                grafana      11 minutes ago   Up 11 minutes   127.0.0.1:3000->3000/tcp
+exercise6-jenkins-1      exercise6-jenkins:lab      "/usr/bin/tini -- /uΓÇª"   jenkins      20 minutes ago   Up 20 minutes   127.0.0.1:8081->8080/tcp
+exercise6-metrics-1      exercise6-metrics:lab      "python -u delivery_ΓÇª"   metrics      11 minutes ago   Up 11 minutes   127.0.0.1:8000->8000/tcp
+exercise6-prometheus-1   exercise6-prometheus:lab   "/bin/prometheus --cΓÇª"   prometheus   11 minutes ago   Up 11 minutes   127.0.0.1:9090->9090/tcp
