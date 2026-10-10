@@ -1,0 +1,2 @@
+﻿CONTAINER ID   IMAGE                       COMMAND                  CREATED         STATUS         PORTS                      NAMES
+8ce94be0aeb0   jenkins/jenkins:lts-jdk21   "/usr/bin/tini -- /uΓÇª"   5 minutes ago   Up 5 minutes   127.0.0.1:8080->8080/tcp   jenkins-ci-lab
