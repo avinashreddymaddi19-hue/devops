@@ -1,0 +1,1 @@
+﻿Image: jenkins/jenkins:lts-jdk21 | Status: running | Ports: {"8080/tcp":[{"HostIp":"127.0.0.1","HostPort":"8080"}]} | Mounts: [{"Type":"volume","Name":"exercise7_jenkins_home","Source":"/var/lib/docker/volumes/exercise7_jenkins_home/_data","Destination":"/var/jenkins_home","Driver":"local","Mode":"z","RW":true,"Propagation":""}]
