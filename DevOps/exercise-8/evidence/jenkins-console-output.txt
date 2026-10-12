@@ -1,0 +1,26 @@
+Started by user admin
+
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/HelloWorld
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/Bheema97/devops-sample-code.git
+ > git init /var/jenkins_home/workspace/HelloWorld # timeout=10
+Fetching upstream changes from https://github.com/Bheema97/devops-sample-code.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/Bheema97/devops-sample-code.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Bheema97/devops-sample-code.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 2bd528514e3a8c31ee427cc66bb61b4bca8b29c9 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2bd528514e3a8c31ee427cc66bb61b4bca8b29c9 # timeout=10
+Commit message: "Add Hello Jenkins shell script"
+First time build. Skipping changelog.
+[HelloWorld] $ /bin/sh -xe /tmp/jenkins11492334232844638853.sh
++ sh hello-world.sh
+Hello, Jenkins!
+Finished: SUCCESS
