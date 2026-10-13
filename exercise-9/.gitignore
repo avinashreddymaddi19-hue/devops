@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+python-app-deploy/
+unit-test-output.txt
+http-test-output.txt

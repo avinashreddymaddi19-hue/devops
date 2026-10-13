@@ -1,0 +1,2 @@
+HTTP smoke test passed: 200 OK
+Hello, Jenkins Multi-Stage Pipeline!
