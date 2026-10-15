@@ -1,0 +1,4 @@
+﻿NAME                      TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+kubernetes                ClusterIP   10.96.0.1        <none>        443/TCP        8m32s
+product-catalog-service   NodePort    10.101.121.202   <none>        80:30658/TCP   88s
+shopping-cart-service     NodePort    10.100.167.203   <none>        80:30310/TCP   85s

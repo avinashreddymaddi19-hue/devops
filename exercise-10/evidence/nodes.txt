@@ -1,0 +1,4 @@
+﻿NAME                   STATUS   ROLES           AGE     VERSION
+devops-multinode       Ready    control-plane   8m11s   v1.37.0
+devops-multinode-m02   Ready    <none>          7m22s   v1.37.0
+devops-multinode-m03   Ready    <none>          6m38s   v1.37.0
